@@ -20,7 +20,7 @@ class Zefoy:
 		self.services_ids = {}
 		self.services_status = {}
 		self.url = 'None'
-		self.text = 'By @plowside [No url]'
+		self.text = 'By @softwec.dev [No url]'
 
 	def get_captcha(self):
 		if os.path.exists('session'): self.session.cookies.set("PHPSESSID", open('session',encoding='utf-8').read(), domain='zefoy.com')
@@ -183,7 +183,7 @@ class Zefoy:
 			try:
 				ctypes.windll.kernel32.SetConsoleTitleA(self.text.encode())
 				video_info = self.get_video_info()
-				self.text = f"By @plowside | Views: {video_info['viewCount']} | Likes: {video_info['likeCount']} | Comments: {video_info['commentCount']} | Shares: {video_info['shareCount']}"
+				self.text = f"By @softwec.dev | Views: {video_info['viewCount']} | Likes: {video_info['likeCount']} | Comments: {video_info['commentCount']} | Shares: {video_info['shareCount']}"
 			except: pass
 			time.sleep(5)
 
